@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>portfolio</title>
+</head>
+<body>
+    <header>
+        <section class="navigation">
+            <ul>
+                <li>
+                   <a href="#experience">experience</a>
+                </li>
+                <li>
+                    <a href="#projects"> projects </a>
+                </li>
+                <li>
+                    <a href="#contact-popup" onclick="openContactPopup()">contact</a>
+                </li>
+            </ul>
+        </section>
+        <section class="motion-edt">
+            <p class="text">HELLO I AM A BACKEND DEVELOPER<br>STUDENT IN IUL 2ND YEAR.<br>FOR MORE INFO SCROLL DOWN</p>
+            <img src="pics/header.jpg" class="img" alt="header">
+            <button class="bt-n">about me </button>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </section>
+    </header>
+    <div id="desktopContent">
+        <!-- Desktop HTML content -->
+        <section class="projects" id="projects">
+            <h1 class="title">projects</h1><hr><br><br><br>
+            <div class="prj1"><img src="pics/prj1.jpg"><p class="p1">project 1 <br> a restaurant simple<br> project where <br> you can order<br> food directly </p></div>
+            <div class="prj2"><p class="p2">project 2 <br> a todo list <br> where you can <br> write , edit ,read , delete <br> also you can put <br> a security password </p><img src="pics/prj2.jpg"></div>    
+            <div class="prj3"><img src="pics/prj3.jpg"><p class="p3">project 3 <br> a project of <br> quizzes where you<br> can attempt a <br> quiz of different<br> category then see <br> your high score</p></div>
+            <div class="prj4"><p class="p4">project 4 <br> a place where you<br> can offer , search<br> , apply , see a different<br> types of jobs send<br> your info to the <br> offered job via email<br> for a chance to <br> start your journey </p><img src="pics/prj4.jpg"></div>
+        </section>
+    </div>
+    
+    <div id="mobileContent" style="display: none;">
+        <!-- Mobile HTML content -->
+        <section class="projects" id="projects">
+            <h1 class="title">projects</h1>
+            <hr><br><br><br>
+            <div class="prj1">
+                <img src="pics/prj1.jpg">
+                <p class="p1">project 1 <br> a restaurant simple<br> project where <br> you can order<br> food directly </p>
+            </div>
+            <div class="prj2">
+                <img src="pics/prj2.jpg">
+                <p class="p2">project 2 <br> a todo list <br> where you can <br> write, edit, read, delete <br> also you can put <br> a security password </p>
+            </div>
+            <div class="prj3">
+                <img src="pics/prj3.jpg">
+                <p class="p3">project 3 <br> a project of <br> quizzes where you<br> can attempt a <br> quiz of different<br> category then see <br> your high score</p>
+            </div>
+            <div class="prj4">
+                <img src="pics/prj4.jpg">
+                <p class="p4">project 4 <br> a place where you<br> can offer, search,<br> apply, see different<br> types of jobs, send<br> your info to the <br> offered job via email<br> for a chance to <br> start your journey </p>
+            </div>
+        </section>
+    </div>
+    
+    <script>
+        function checkDevice() {
+            // This is a simple check. For more accuracy, consider using a library like Modernizr
+            if (window.innerWidth <= 600) {
+                document.getElementById('desktopContent').style.display = 'none';
+                document.getElementById('mobileContent').style.display = 'block';
+            } else {
+                document.getElementById('desktopContent').style.display = 'block';
+                document.getElementById('mobileContent').style.display = 'none';
+            }
+        }
+    
+        // Run the function on load and on resize
+        window.onload = checkDevice;
+        window.onresize = checkDevice;
+    </script>
+    
+    <section class="experience" id="experience">
+        <h1 class="title">experience</h1><hr><br><br><br>
+        <img src="pics/c++.jpg">
+        <img src="pics/css.jpg">
+        <img src="pics/html.jpg">
+        <img src="pics/java.jpg">
+        <img src="pics/php.jpg">
+        <img src="pics/python.jpg">
+    </section>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 AL-HASSAN KHALIL</p>
+        </div>
+    </footer>
+    <section class="contact-popup" id="contact-popup">
+        <div class="contact-popup-content">
+            <span class="close" onclick="closeContactPopup()">&times;</span>
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+    <script>
+        function openContactPopup() {
+            document.getElementById("contact-popup").style.display = "block";
+        }
+
+        function closeContactPopup() {
+            document.getElementById("contact-popup").style.display = "none";
+        }
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+
+            var subject = 'Contact Form Submission';
+            var body = 'Name: ' + name + '\nEmail: ' + email + '\nMessage:\n' + message;
+
+            var mailtoLink = 'mailto:hassan.khalilro@gmail.com'
+                            + '?subject=' + encodeURIComponent(subject)
+                            + '&body=' + encodeURIComponent(body);
+
+            window.location.href = mailtoLink;
+             closeContactPopup();
+        });
+    </script>
+</body>
+</html>
