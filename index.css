@@ -402,6 +402,15 @@ body {
         .navigation li {
             float: none;
         }
+        .img{
+            z-index: 0;
+            margin-top: 100px;
+            margin-left: 0;
+            border-radius: 10px;
+            width: 100px;
+            height: 100px;
+           
+        }
         .bt-n {
             margin-left: 0;
             margin-top: 0;
@@ -433,7 +442,6 @@ body {
             line-height: 1.5;
         }
         .experience img {
-            margin-left: 20px;
             width: 100px;
             height: 100px;
         }
@@ -500,7 +508,7 @@ body {
                 margin: 20% auto;
                 padding: 20px;
                 border: 1px solid #888;
-                width: 80%; /* Adjusted for smaller screens */
+                width: 100%; /* Adjusted for smaller screens */
             }
         
             .contact-popup-content h2 {
