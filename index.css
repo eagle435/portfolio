@@ -320,7 +320,7 @@ body {
         }
       
         .bt-n::after {
-            content: '   up   ';
+            content: '   z   ';
             font-size: 16px;
             position: absolute;
             left: -20px;
