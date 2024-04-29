@@ -304,6 +304,9 @@ body {
         background-color: #008CBA;
     }
     @media screen and (max-width: 600px) {
+        *{
+          overflow-x: hidden;
+        }
         .navigation li {
             float: none;
         }
@@ -390,4 +393,164 @@ body {
         }
         
     }
+    @media screen and (min-width: 300px) and (max-width: 350px) and (min-height: 540px) and (max-height: 580px) {
+    
+    
+        *{
+          overflow-x: hidden;
+        }
+        .navigation li {
+            float: none;
+        }
+        .bt-n {
+            margin-left: 0;
+            margin-top: 0;
+            margin-right: 130px;
+            width: 30%;
+
+            position: relative;
+        }
+      
+        .bt-n::after {
+            content: '   up   ';
+            font-size: 16px;
+            position: absolute;
+            left: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0;
+            transition: all .2s ease;
+        }
+       
+        .prj1, .prj3, .prj2, .prj4 {
+            margin-right: 0;
+            margin-left: 0;
+        }
+        .p1, .p4, .p2, .p3 {
+            margin-left: 10px;
+            margin-right: 10px;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .experience img {
+            margin-left: 20px;
+            width: 100px;
+            height: 100px;
+        }
+ 
+        .projects {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .projects .title {
+            font-size: 24px; /* Adjust font size for smaller screens */
+            margin-top: 20px;
+            width: 90%; /* Set width to fit mobile screens */
+        }
+    
+        .projects hr {
+            width: 50%; /* Adjust width of the horizontal rule for mobile screens */
+        }
+    
+        .projects div {
+            flex-direction: column;
+            align-items: center;
+            margin: 10px 0;
+        }
+    
+        .projects div img {
+            width: 90%; /* Adjust image size for mobile screens */
+            height: auto; /* Maintain aspect ratio */
+            margin: 0; /* Reset margin for mobile view */
+        }
+    
+        .projects div p {
+            font-size: 18px; /* Adjust paragraph font size for readability on mobile */
+            margin: 10px; /* Adjust margin for mobile view */
+            text-align: center; /* Add this line to center the text */
+
+            padding: 0 5%; /* Add padding for text inside the projects div */
+        }
+    
+        /* Adjust the margins for project items */
+        .prj1, .prj3, .prj2, .prj4 {
+            margin: 0;
+        }
+    
+        /* Adjust the positioning for project descriptions */
+        .p1, .p4, .p2, .p3 {
+            margin: 0;
+            padding: 0 5%;
+        }
+            .contact-popup {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+        
+            .contact-popup-content {
+                background-color: #fefefe;
+                margin: 20% auto;
+                padding: 20px;
+                border: 1px solid #888;
+                width: 80%; /* Adjusted for smaller screens */
+            }
+        
+            .contact-popup-content h2 {
+                margin-bottom: 20px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 20px; /* Adjusted for smaller screens */
+                font-weight: bold;
+                color: #333; 
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                text-align: center;
+            }
+        
+            .contact-popup-content form label {
+                display: block;
+                margin-bottom: 10px;
+                font-size: 14px; /* Adjusted for smaller screens */
+                color: #333;
+            }
+        
+            .contact-popup-content form input[type="text"],
+            .contact-popup-content form input[type="email"],
+            .contact-popup-content form textarea {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 20px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 14px; /* Adjusted for smaller screens */
+            }
+        
+            .contact-popup-content form textarea {
+                resize: vertical;
+                min-height: 100px;
+            }
+        
+            .contact-popup-content form button[type="submit"] {
+                background-color: #333;
+                color: #fff;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                font-size: 14px; /* Adjusted for smaller screens */
+                cursor: pointer;
+            }
+        
+            .contact-popup-content form button[type="submit"]:hover {
+                background-color: #008CBA;
+            }
+        }
+        
+        
     
