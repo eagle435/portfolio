@@ -312,7 +312,7 @@ body {
         }
         .img{
             z-index: 0;
-            margin-top: 80px;
+            margin-top: 100px;
             margin-left: 20px;
             border-radius: 10px;
             width: 90%; /* Adjust image size for mobile screens */
@@ -381,6 +381,7 @@ body {
             width: 80%; /* Adjust image size for mobile screens */
             height: auto; /* Maintain aspect ratio */
             margin: 0; /* Reset margin for mobile view */
+            margin-top: 30px;
         }
     
         .projects div p {
