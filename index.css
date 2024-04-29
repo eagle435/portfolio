@@ -329,7 +329,7 @@ body {
         }
       
         .bt-n::after {
-            content: '   z   ';
+            content: '';
             font-size: 16px;
             position: absolute;
             left: -20px;
