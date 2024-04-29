@@ -412,7 +412,7 @@ body {
         }
       
         .bt-n::after {
-            content: '   up   ';
+            content: '   d   ';
             font-size: 16px;
             position: absolute;
             left: -20px;
